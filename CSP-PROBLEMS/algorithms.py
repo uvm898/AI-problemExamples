@@ -185,6 +185,8 @@ class BacktrackingAlgorithmFCAC(Algorithm):
                               solved_set: set, arcs_dict: dict):
         if level == len(variables):
             return True
+        # at this moment we can optimize how to choose next variable
+        # at this moment we can optimize how to choose next value of the variable
         var_str = list(variables.keys())[level]
         for word in domains[var_str]:
             if BacktrackingAlgorithmFCAC.is_consistent_assignment(var_str, word, help_tiles):
@@ -329,6 +331,9 @@ class BacktrackingAlgorithmFC(Algorithm):
     def backtrack_search_fc(self, level, variables: dict, domains: dict, moves_list: list, help_tiles, solved_set: set):
         if level == len(variables):
             return True
+        
+        # at this moment we can optimize how to choose next variable
+        # at this moment we can optimize how to choose next value of the variable
         var_str = list(variables.keys())[level]
         for word in domains[var_str]:
             if BacktrackingAlgorithmFC.is_consistent_assignment(var_str, word, help_tiles):
@@ -418,6 +423,9 @@ class BacktrackingAlgorithm(Algorithm):
     def backtrack_search(self, level, variables: dict, domains: dict, moves_list: list, help_tiles):
         if level == len(variables):
             return True
+        
+        # at this moment we can optimize how to choose next variable
+        # at this moment we can optimize how to choose next value of the variable
         var_str = list(variables.keys())[level]
         for word in domains[var_str]:
             if BacktrackingAlgorithm.is_consistent_assignment(var_str, word, help_tiles):
