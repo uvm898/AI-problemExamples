@@ -1,0 +1,3 @@
+My learning path for Machine Learning.
+Codes, papers, algorithms, maths models...
+This is going to be my research journal.
